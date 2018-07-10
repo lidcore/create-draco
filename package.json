@@ -2,12 +2,8 @@
   "name": "create-draco",
   "version": "1.0.0",
   "description": "Create draco applications.",
-  "main": "src/createDraco.js",
   "scripts": {
-    "build": "bsb -make-world",
-    "watch": "bsb -make-world -w",
-    "clean": "bsb -clean-world",
-    "create-draco": "node ./src/createDraco.js"
+    "create-draco": "node ./index.js"
   },
   "repository": {
     "type": "git",
@@ -26,8 +22,9 @@
   "bugs": {
     "url": "https://github.com/lidcore/create-draco/issues"
   },
-  "homepage": "https://github.com/lidcore/create-draco#readme",
+  "homepage": "https://github.com/lidcore/create-draco",
   "dependencies": {
-    "bs-platform": "^4.0.0"
+    "deepmerge": "^2.1.1",
+    "shelljs": "^0.8.2"
   }
 }

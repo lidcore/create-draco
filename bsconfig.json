@@ -1,5 +1,4 @@
 {
-  "name": "@lidcore/create-draco",
   "namespace": true,
   "sources": [
     "src"

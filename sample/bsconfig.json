@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "bs-dependencies" : [
+    "bs-async-monad",
+    "@lidcore/bs-node",
+    "@lidcore/draco"
+  ],
+  "bs-dev-dependencies": []
+}

@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "bsb -make-world",
+    "clean": "bsb -clean-world",
+    "watch": "bsb -make-world -w"
+  },
+  "dependencies": {
+    "@lidcore/draco": "git+https://github.com/lidcore/draco.git",
+    "bs-platform": "^4.0.0"
+  }
+}
