@@ -1,0 +1,33 @@
+{
+  "name": "create-draco",
+  "version": "1.0.0",
+  "description": "Create draco applications.",
+  "main": "src/createDraco.js",
+  "scripts": {
+    "build": "bsb -make-world",
+    "watch": "bsb -make-world -w",
+    "clean": "bsb -clean-world",
+    "create-draco": "node ./src/createDraco.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lidcore/create-draco.git"
+  },
+  "keywords": [
+    "npm",
+    "npx",
+    "init",
+    "create",
+    "draco",
+    "bucklescript"
+  ],
+  "author": "Lidcore IT <it@lidcore.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lidcore/create-draco/issues"
+  },
+  "homepage": "https://github.com/lidcore/create-draco#readme",
+  "dependencies": {
+    "bs-platform": "^4.0.0"
+  }
+}
