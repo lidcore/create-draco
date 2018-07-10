@@ -4,7 +4,9 @@ var path      = require("path");
 var readline  = require('readline');
 var shell     = require("shelljs");
 
-var dirname = path.normalize(path.join(__dirname, process.argv[2] || "."));
+var cwd = process.cwd();
+
+var dirname = path.normalize(path.join(cwd, process.argv[2] || "."));
 
 var sampleDir = path.normalize(path.join(__dirname, "sample"));
 
