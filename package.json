@@ -5,6 +5,7 @@
   "scripts": {
     "create-draco": "node ./index.js"
   },
+  "bin": "create-draco",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lidcore/create-draco.git"
