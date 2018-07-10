@@ -1,8 +1,9 @@
-var deepmerge = require("deepmerge");
-var fs        = require("fs");
-var path      = require("path");
-var readline  = require('readline');
-var shell     = require("shelljs");
+var child_process = require("child_process");
+var deepmerge     = require("deepmerge");
+var fs            = require("fs");
+var path          = require("path");
+var readline      = require('readline');
+var shell         = require("shelljs");
 
 var cwd = process.cwd();
 
@@ -42,22 +43,37 @@ var createProject = function (dirname) {
   console.log("All set!");
 };
 
-rl.question("Create a new draco project at " + dirname + " ? (Y/n).. ",function (response) {
+var isYes = function (response) {
   switch (response) {
     case "Y":
     case "y":
     case "":
-      createProject(dirname);
-      break;
+      return;
     case "n":
     case "N":
       console.log("Aborting..");
-      break;
+      process.exit(0);
     default:
       console.error("Invalid response: " + response);
       process.exit(1);
   }
+}
 
-  rl.close();
+rl.question("Create a new draco project at " + dirname + " ? (Y/n).. ", function (response) {
+  isYes(response);
+  createProject(dirname);
+
+  rl.question("Run npm install in " + dirname + " ? (Y/n).. ", function (response) {
+    isYes(response);
+    var npm = child_process.spawn("cd " + dirname + " && npm install",{
+      shell: true,
+      stdio: "inherit"
+    });
+
+    npm.on("close", function (code) {
+      rl.close();
+      process.exit(code);
+    });
+  });
 });
 
