@@ -29,5 +29,3 @@
 *.lock
 /__tests__/files/
 .env
-*.yaml
-config/

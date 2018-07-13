@@ -63,6 +63,8 @@ rl.question("Create a new draco project at " + dirname + " ? (Y/n).. ", function
   isYes(response);
   createProject(dirname);
 
+  console.log("Don't forget to edit config/{staging,production}/draco.yml!\n");
+
   rl.question("Run npm install in " + dirname + " ? (Y/n).. ", function (response) {
     isYes(response);
     var npm = child_process.spawn("cd " + dirname + " && npm install",{

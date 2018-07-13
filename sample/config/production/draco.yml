@@ -1,0 +1,4 @@
+---
+projectId: draco-sample
+serviceAccount: service-account@developer.gserviceaccount.com
+zone: us-east1-b
