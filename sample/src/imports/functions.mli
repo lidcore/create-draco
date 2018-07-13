@@ -1,1 +1,1 @@
-include module type of LidcoreDraco.functions
+include module type of LidcoreDraco.Functions
