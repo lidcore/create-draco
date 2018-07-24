@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@lidcore/draco": "git+https://github.com/lidcore/draco.git",
+    "bs-async-monad": "^1.2.1",
     "bs-platform": "^4.0.0",
     "firebase-tools": "^3.19.2"
   }
