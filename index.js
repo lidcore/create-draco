@@ -33,6 +33,7 @@ var createProject = function (dirname) {
 
   console.log("Copying files..");
   shell.cp("-rf", sampleDir, dirname);
+  shell.mv(dirname + "/gitignore", dirname + "/.gitignore");
 
   console.log("Editing package.json..");
   editJson(path.join(dirname,"package.json"),{name: path.basename(dirname)}); 
