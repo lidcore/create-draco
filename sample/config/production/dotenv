@@ -1,3 +1,4 @@
 # Add ENV variables here
 NODE_ENV="production"
 STAGE="staging"
+DRACO_SYSTEN="draco-sample"
